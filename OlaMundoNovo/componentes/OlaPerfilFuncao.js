@@ -1,20 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const OlaPerfilFuncao = (props) => {
+// Componente baseado em função
+const OlaPerfilFuncao = ({ nome, endereco, telefone }) => {
   return (
-    <div>
-      <h2>Perfil (Função)</h2>
-      <p>
-        <strong>Nome:</strong> {props.nome}
-      </p>
-      <p>
-        <strong>Endereço:</strong> {props.endereco}
-      </p>
-      <p>
-        <strong>Telefone:</strong> {props.telefone}
-      </p>
-    </div>
+    <View style={[styles.container, styles.funcaoContainer]}>
+      <Text style={styles.title}>Perfil (Componente Função)</Text>
+      <Text style={styles.text}>Nome: {nome}</Text>
+      <Text style={styles.text}>Endereço: {endereco}</Text>
+      <Text style={styles.text}>Telefone: {telefone}</Text>
+    </View>
   );
 };
-
-export default OlaPerfilFuncao;

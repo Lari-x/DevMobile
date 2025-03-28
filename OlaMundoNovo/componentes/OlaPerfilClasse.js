@@ -1,16 +1,15 @@
-import React, { Component } from "react";
-
+// Componente baseado em classe
 class OlaPerfilClasse extends Component {
   render() {
+    const { nome, endereco, telefone } = this.props;
+    
     return (
-      <div>
-        <h2>Perfil (Classe)</h2>
-        <p><strong>Nome:</strong> {this.props.nome}</p>
-        <p><strong>Endereço:</strong> {this.props.endereco}</p>
-        <p><strong>Telefone:</strong> {this.props.telefone}</p>
-      </div>
+      <View style={[styles.container, styles.classeContainer]}>
+        <Text style={styles.title}>Perfil (Componente Classe)</Text>
+        <Text style={styles.text}>Nome: {nome}</Text>
+        <Text style={styles.text}>Endereço: {endereco}</Text>
+        <Text style={styles.text}>Telefone: {telefone}</Text>
+      </View>
     );
   }
 }
-
-export default OlaPerfilClasse;
